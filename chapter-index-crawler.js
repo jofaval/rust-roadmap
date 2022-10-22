@@ -87,6 +87,7 @@
   const rawChapterCommands = sortedChapterCommands.map(mapChapterFolder);
   logDebugStyled("chapter map", chaptersMap);
   logDebugStyled("raw chapter commands", rawChapterCommands);
+  delete chaptersMap;
 
   const chaptersGenerationCommand = [
     "",
