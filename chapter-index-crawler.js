@@ -6,7 +6,12 @@
   const QUERY_CHAPTER_INDECES = "ol.chapter a";
   const NUM_PROLOGUE_CHAPTERS = 3;
   const JUMPLINE = "\n";
-  const CONSOLE_LOG_STYLE = "font-weight-bold";
+  const CONSOLE_LOG_STYLE = `
+    font-weight: 1000;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: Arial;
+  `.replaceAll("\n", " ");
   const DIRECTORY_SEPARATOR = "/";
   // const SUB_INDEX_REGEX = /(\.(?!\s))+/;
   const SUB_INDEX = ".";
@@ -24,7 +29,7 @@
     return console.log(...content);
   };
   const logDebugStyled = (header, variable) => {
-    logDebug(`%c ${header}`, CONSOLE_LOG_STYLE, variable);
+    logDebug(`%c${header}`, CONSOLE_LOG_STYLE, variable);
   };
 
   const getChapters = () =>
